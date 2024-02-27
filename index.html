@@ -10,7 +10,7 @@
     <!--Header Aufbau:
     Menüpunkt, logo, suchleiste(textinput), Notifications, Profilvorschau, genres -->
     <div id="menu" class="header">
-        <div id="menuepunkt" class="header"> <img ></div>
+        <div id="menuepunkt" class="header"> <img id="imgmenuIcon" src="menuIcon.png"; style="height: 40px; width: 40px; padding:5px;";></div>
         
         <div id="icon" class="header"><img src="">    </div>
 
@@ -28,10 +28,27 @@
 <style>
     .header{
         display:inline;
+        height:100px;
+        width:100%;
     }
+
+    #imgmenuIcon{
+        
+        
+        background-color: transparent;   
+        border-radius: 50%;   
+        transition: all 150ms ease-in-out; 
+       
+        }  
+        #imgmenuIcon:hover{
+            background-color:rgb(235, 234, 234);
+            box-shadow: 0 0 3px 0 grey inset, 0 0 3px 1px grey;
+            border-width:1px;
+        }    
+
+ 
+
+   
 </style>
-<script>
 
-
-</script>
 </html>
