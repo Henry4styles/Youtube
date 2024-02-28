@@ -9,37 +9,43 @@
 <body>
     <!--Header Aufbau:
     Menüpunkt, logo, suchleiste(textinput), Notifications, Profilvorschau, genres -->
-    <div id="menu" class="headerclass">
-        <div id="menuepunkt" class="headeritem"> <img id="imgmenuIcon" src="menuIcon.png";></div>
-        
-        <div id="logo" class="headeritem"><img src=""> <img id="imgLogo" src="YTLogo.png">   </div>
+    <header>
+        <div id="menu" class="headerclass">
+            <div id="menuepunkt" class="headeritem"> <img id="imgmenuIcon" class="icon" src="menuIcon.png";></div>
+            
+            <div id="logo" class="headeritem"><img src=""> <img id="imgLogo" src="YTLogo.png">   </div>
 
-        <div id="suchleiste" class="headeritem"> <input id="Searchbar" class="headeritem"> <button id="searchbutton"><img id="SearchIcon" src="searchIcon.svg"></button> </div>
+            <div id="suchleiste" class="headeritem"> <input id="Searchbar" class="headeritem"> <button id="searchbutton"><img id="SearchIcon" src="searchIcon.svg"></button> </div>
 
-        <div id="notifications" class="headeritem">    </div>
+            <div id="notifications" class="headeritem"> <img id="NotificationIcon" class="icon" src="notificationIcon.png"> </div>
 
-        <div id="profileView" class="headeritem">  </div>
-    </div>
-
-    <div id="test"></div>
+            <div id="profileView" class="headeritem"> <img id="profileicon" class="icon" src="Profileimg.png"> </div>
+        </div>
+    </header>
+    <div class="Videos" style="font-size:1100px; margin-top: 50px;">fast</div>
 </body>
 
 <style>
-   .headerclass {
-        display: flex;
-        align-items: center;
-        height: 50px;
+   header {
         position: fixed;
+        top: 0;
         width: 100%;
         background-color: #fff; 
         z-index: 1000; 
+    }
+
+    .headerclass {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        padding:10px;
     }
 
     .headeritem {
         margin: 0 10px;
     }
 
-    #imgmenuIcon {
+    .icon {
         background-color: transparent;
         border-radius: 50%;
         transition: all 150ms ease-in-out;
@@ -49,7 +55,7 @@
         cursor: pointer;
     }
 
-    #imgmenuIcon:hover {
+    .icon:hover {
         background-color: rgb(235, 234, 234);
         box-shadow: 0 0 3px 0 grey inset, 0 0 3px 1px grey;
         border-width: 1px;
@@ -65,7 +71,6 @@
         flex-grow: 1;
         height: 100%;
         display: flex;
-        
         margin-left: 300px;
         position: relative;
         text-align: center;
@@ -98,9 +103,14 @@
         border-right: 20%;
         height: 80%;
         border-width:1px;
-        
-   
     }
+
+    
+ 
+        
+
+
+
 </style>
 
 </html>
