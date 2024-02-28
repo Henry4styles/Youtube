@@ -4,51 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube</title>
-
 </head>
-<header>
+
+<body>
     <!--Header Aufbau:
     Menüpunkt, logo, suchleiste(textinput), Notifications, Profilvorschau, genres -->
-    <div id="menu" class="header">
-        <div id="menuepunkt" class="header"> <img id="imgmenuIcon" src="menuIcon.png"; style="height: 40px; width: 40px; padding:5px;";></div>
+    <div id="menu" class="headerclass">
+        <div id="menuepunkt" class="headeritem"> <img id="imgmenuIcon" src="menuIcon.png";></div>
         
-        <div id="icon" class="header"><img src="">    </div>
+        <div id="logo" class="headeritem"><img src=""> <img id="imgLogo" src="YTLogo.png">   </div>
 
-        <div id="suchleiste" class="header">   </div>
+        <div id="suchleiste" class="headeritem"> <input id="Searchbar" class="headeritem"> <button id="searchbutton"><img id="SearchIcon" src="searchIcon.svg"></button> </div>
 
-        <div id="notifications" class="header">    </div>
+        <div id="notifications" class="headeritem">    </div>
 
-        <div id="profileView" class="header">  </div>
-
+        <div id="profileView" class="headeritem">  </div>
     </div>
-</header>
-<body>
-   
+
+    <div id="test"></div>
 </body>
+
 <style>
-    .header{
-        display:inline;
-        height:100px;
-        width:100%;
+   .headerclass {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        position: fixed;
+        width: 100%;
+        background-color: #fff; 
+        z-index: 1000; 
     }
 
-    #imgmenuIcon{
+    .headeritem {
+        margin: 0 10px;
+    }
+
+    #imgmenuIcon {
+        background-color: transparent;
+        border-radius: 50%;
+        transition: all 150ms ease-in-out;
+        height: 40px;
+        width: 40px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    #imgmenuIcon:hover {
+        background-color: rgb(235, 234, 234);
+        box-shadow: 0 0 3px 0 grey inset, 0 0 3px 1px grey;
+        border-width: 1px;
+    }
+
+    #imgLogo {
+        width: auto;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    #suchleiste {
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
         
-        
-        background-color: transparent;   
-        border-radius: 50%;   
-        transition: all 150ms ease-in-out; 
+        margin-left: 300px;
+        position: relative;
+        text-align: center;
+    }
+
+    #Searchbar {
+        width: 600px;
+        height: 40px;
+        border-radius: 40px;
+        padding: 0 20px;
+        box-sizing: border-box; 
+        border-style:solid;
+        cursor: text;
+        font-size: medium;
+        border-width:1px;
+        position: absolute;
+    }
+    #SearchIcon{
        
-        }  
-        #imgmenuIcon:hover{
-            background-color:rgb(235, 234, 234);
-            box-shadow: 0 0 3px 0 grey inset, 0 0 3px 1px grey;
-            border-width:1px;
-        }    
-
- 
-
+        background-color: #e7e3e3;
+        height:20px;
+       
+    }
+    #searchbutton{
+        margin-left:550px;
+        position:absolute;
+        border-radius: 0 40px 40px 0; 
+        background:#e7e3e3;
+        width:60px;
+        border-right: 20%;
+        height: 80%;
+        border-width:1px;
+        
    
+    }
 </style>
 
 </html>
