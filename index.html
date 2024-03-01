@@ -9,14 +9,14 @@
             
             width:400px;
         }
-       .VideoItem{
+       .video-item{
         border: 1px solid black; 
         height:120%;
         width:192px;
         padding-bottom:50px;
        }
        
-       .Videos{
+       .videos{
         margin-left: 100px;
         
         
@@ -43,7 +43,7 @@
             margin: 0 10px;
         }
     
-        .iconRound {
+        .icon-round {
             background-color: transparent;
             border-radius: 50%;
             transition: all 150ms ease-in-out;
@@ -53,13 +53,13 @@
             cursor: pointer;
         }
     
-        .iconRound:hover {
+        .icon-round:hover {
             background-color: rgb(235, 234, 234);
             box-shadow: 0 0 3px 0 grey inset, 0 0 3px 1px grey;
             border-width: 1px;
         }
     
-        #imgLogo {
+        #img-logo {
             width: auto;
             height: 50px;
             cursor: pointer;
@@ -69,15 +69,15 @@
             flex-grow: 1;
             height: 100%;
             display: flex;
-            margin-left: 300px;
+            
             position: relative;
             
         }
     
-        #Searchbar {
+        #searchbar {
+            margin-left:500px;
             width: 600px;
             height: 40px;
-            border-radius: 40px;
             padding: 0 20px;
             box-sizing: border-box; 
             border-style:solid;
@@ -86,23 +86,48 @@
             border-width:1px;
             position: absolute;
         }
-        #SearchIcon{
+        #search-icon{
            
             background-color: #e7e3e3;
             height:20px;
+            width:20px;
+           
            
         }
         #searchbutton{
-            margin-left:550px;
+            margin-left:80%;
             position:absolute;
             border-radius: 0 40px 40px 0; 
             background:#e7e3e3;
             width:60px;
             border-right: 20%;
-            height: 80%;
+            height: 45%;
             border-width:1px;
+        }
+        .rechteck-icon{
+            height: 3%;
+            width: 3%;
+        }
+        .thumbnail{
+          width: 30%;
+          height:50%;
+        }
+        .video-list{
+            display: inline-flex;
+        }
+        .profile-img{
+            width: 40px;
+        }
+        .border-left{
+            margin-top:100px;
+            
+        }
+        .short{
+           
+            border: 1px solid black; 
+            display:inline-flexbox;
+            height: 500px;
         } */
-    
     </style>
 </head>
 
@@ -111,20 +136,20 @@
     Menüpunkt, logo, suchleiste(textinput), Notifications, Profilvorschau, genres -->
     <header>
         <div id="menu" class="headerclass">
-             <img id="imgmenuIcon" class="iconRound" src="menuIcon.png" style="height:40px;width:40px;";>
+             <img id="imgmenu-icon" class="icon-round" src="menu-icon.png";>
             
-             <img src=""> <img id="imgLogo" src="YTLogo.png" style="height:40px";>
+             <img src=""> <img id="img-logo" src="YTLogo.png" ;>
 
-             <input id="Searchbar" class="headeritem"> 
-             <button id="searchbutton"><img id="SearchIcon" src="searchIcon.svg" style="height:40px";></button>
+             <input id="searchbar" class="headeritem"> 
+             <button id="searchbutton"><img id="search-icon" src="search-icon.svg";></button>
 
-             <img id="NotificationIcon" class="iconRound" src="notificationIcon.png" style="height:40px";> 
+             <img id="NotificationIcon" class="icon-round" src="notificationIcon.png" ;> 
 
-             <img id="profileicon" class="iconRound" src="Profileimg.png" style="height:40px";>
+             <img id="profile-icon" class="icon-round" src="Profileimg.png";>
         </div>
         <nav>
-            <button> Alle</button>
-            <button> Gaming</button>
+            <button>Alle</button>
+            <button>Gaming</button>
             <button>Musik</button>
             <button>Mixe</button>
             <button>Live</button>
@@ -135,159 +160,248 @@
         </nav>
     </header>
     <nav>
-            <li><img class="rechteckIcon" id="Startseiteimg" src="Startseite.png" style="height:40px"; > </li>
-            <li><img class="rechteckIcon" id="shortsImg" src="shorts.png" style="height:40px"; ></li>
-            <li><img class="rechteckIcon" id="Abos" src="Abos.png"style="height:40px"; ></li>
-            <li><img class="rechteckIcon" id="MeinYT" src="MeinYoutube.png"style="height:40px";></li>        
+        <ul class="border-left">
+            <li><img class="rechteck-icon" id="startseite-img" src="Startseite.png" ; > </li>
+            <li><img class="rechteck-icon" id="shorts-img" src="shorts.png" ; ></li>
+            <li><img class="rechteck-icon" id="abos" src="Abos.png"; ></li>
+            <li><img class="rechteck-icon" id="mein-yt" src="MeinYoutube.png";></li>        
+        </ul>
     </nav>
         
    <nav>
-        <li class="VideoList">
+        <ul>
+            <li class="video-list">
+                
+                <section>
+                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                    <img src="Profileimg.png" class="profile-img">
+                    <h1 >Videotitel</h1>  
+                    <p >Name</p>
+                    <p >Aufrufzahl</p>
+                    <p>Datum</p>
+                </section>  
+            </li>  
+            <li class="video-list">
+                
+                <section>
+                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                    <img src="Profileimg.png" class="profile-img">
+                    <h1>Videotitel</h1>  
+                    <p>Name</p>
+                    <p>Aufrufzahl</p>
+                    <p>Datum</p>
+                </section>  
+            </li> 
+            <li class="video-list" >
+                
+                <section>
+                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                    <img src="Profileimg.png"  class="profile-img">
+                    <h1>Videotitel</h1>  
+                    <p>Name</p>
+                    <p>Aufrufzahl</p>
+                    <p>Datum</p>
+                </section>  
+            </li>
+            <li class="video-list">
+                
+                <section>
+                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                    <img src="Profileimg.png"  class="profile-img">
+                    <h1>Videotitel</h1>  
+                    <p>Name</p>
+                    <p>Aufrufzahl</p>
+                    <p>Datum</p>
+                </section>  
+            </li>
+             
+        
+       
             
-            <button>
-                <img src="Thumbnail.jpg" style=" width:300px;"></br>
-                <img src="Profileimg.png" style=" width:50px; ">
-                <h1 style="text-align: left;">Videotitel</h1>  
-                <p style="text-align: left;">Name</p>
-                <p style="text-align: left;">Aufrufzahl</p>
-                <p style="text-align: right;">Datum</p>
-            </button>    
-            <button>
-                <img src="Thumbnail.jpg" style=" width:300px;"></br>
-                <img src="Profileimg.png" style=" width:50px; ">
-                <h1 style="text-align: left;">Videotitel</h1>  
-                <p style="text-align: left;">Name</p>
-                <p style="text-align: left;">Aufrufzahl</p>
-                <p style="text-align: right;">Datum</p>
-            </button>    
-            <button>
-                <img src="Thumbnail.jpg" style=" width:300px;"></br>
-                <img src="Profileimg.png" style=" width:50px; ">
-                <h1 style="text-align: left;">Videotitel</h1>  
-                <p style="text-align: left;">Name</p>
-                <p style="text-align: left;">Aufrufzahl</p>
-                <p style="text-align: right;">Datum</p>
-            </button>    
-            <button>
-                <img src="Thumbnail.jpg" style=" width:300px;"></br>
-                <img src="Profileimg.png" style=" width:50px; ">
-                <h1 style="text-align: left;">Videotitel</h1>  
-                <p style="text-align: left;">Name</p>
-                <p style="text-align: left;">Aufrufzahl</p>
-                <p style="text-align: right;">Datum</p>
-            </button>  
-        </li>  
-        <li class="VideoList">
-            
-            <button>
-                <img src="Thumbnail.jpg" style=" width:300px;"></br>
-                <img src="Profileimg.png" style=" width:50px; ">
-                <h1 style="text-align: left;">Videotitel</h1>  
-                <p style="text-align: left;">Name</p>
-                <p style="text-align: left;">Aufrufzahl</p>
-                <p style="text-align: right;">Datum</p>
-            </button>    
-            <button>
-                <img src="Thumbnail.jpg" style=" width:300px;"></br>
-                <img src="Profileimg.png" style=" width:50px; ">
-                <h1 style="text-align: left;">Videotitel</h1>  
-                <p style="text-align: left;">Name</p>
-                <p style="text-align: left;">Aufrufzahl</p>
-                <p style="text-align: right;">Datum</p>
-            </button>    
-            <button>
-                <img src="Thumbnail.jpg" style=" width:300px;"></br>
-                <img src="Profileimg.png" style=" width:50px; ">
-                <h1 style="text-align: left;">Videotitel</h1>  
-                <p style="text-align: left;">Name</p>
-                <p style="text-align: left;">Aufrufzahl</p>
-                <p style="text-align: right;">Datum</p>
-            </button>    
-            <button>
-                <img src="Thumbnail.jpg" style=" width:300px;"></br>
-                <img src="Profileimg.png" style=" width:50px; ">
-                <h1 style="text-align: left;">Videotitel</h1>  
-                <p style="text-align: left;">Name</p>
-                <p style="text-align: left;">Aufrufzahl</p>
-                <p style="text-align: right;">Datum</p>
-            </button>  
-        </li>  
+            <li class="video-list">
+                
+                <section>
+                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                    <img src="Profileimg.png"  class="profile-img">
+                    <h1>Videotitel</h1>  
+                    <p >Name</p>
+                    <p >Aufrufzahl</p>
+                    <p>Datum</p>
+                </section>  
+            </li>
+            <li class="video-list">
+                
+                <section>
+                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                    <img src="Profileimg.png" class="profile-img">
+                    <h1>Videotitel</h1>  
+                    <p >Name</p>
+                    <p >Aufrufzahl</p>
+                    <p>Datum</p>
+                </section>  
+            </li>
+            <li class="video-list">
+                
+                <section>
+                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                    <img src="Profileimg.png" class="profile-img">
+                    <h1>Videotitel</h1>  
+                    <p>Name</p>
+                    <p>Aufrufzahl</p>
+                    <p>Datum</p>
+                </section>  
+            </li>
+            <li class="video-list">
+                
+                <section>
+                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                    <img src="Profileimg.png"  class="profile-img">
+                    <h1>Videotitel</h1>  
+                    <p>Name</p>
+                    <p>Aufrufzahl</p>
+                    <p>Datum</p>
+                </section>  
+            </li>
+        </ul>
 
         
 
    </nav>
-   <nav style="display: inline-flex;">
-    <img src="shorts.png" style="height:70px;">
-    <h1 style="width:100px;">Shorts</h1>
+   <nav >
+    <img src="shorts.png">
+    <h2>Shorts</h2>
 </nav>
-<br>
 <nav>
     <ul style="display:inline;">
-        <li class="short" style="border: 1px solid black; display:inline-block;">
-            <img src="ShortThumbnail.jpg" style="height: 500px" class="Short"> <br>
+        <li class="short" >
+            <img src="Shortthumbnail.jpg" class="short"> <br>
             <h4>ShortTitel</h4>
             <p>Aufrufe</p>
         </li>
-        <li class="short"style="display:inline-block;">
-            <img src="ShortThumbnail.jpg" style="height: 500px" class="Short"> <br>
+        <li class="short">
+            <img src="Shortthumbnail.jpg" class="Short"> <br>
             <h4>ShortTitel</h4>
             <p>Aufrufe</p>
         </li>
-        <li class="short"style="display:inline-block;">
-            <img src="ShortThumbnail.jpg" style="height: 500px" class="Short"> <br>
+        <li class="short">
+            <img src="Shortthumbnail.jpg" class="Short"> <br>
             <h4>ShortTitel</h4>
             <p>Aufrufe</p>
         </li>
-        <li class="short"style="display:inline-block;">
-            <img src="ShortThumbnail.jpg" style="height: 500px" class="Short"> <br>
+        <li class="short">
+            <img src="Shortthumbnail.jpg"class="Short"> <br>
             <h4>ShortTitel</h4>
             <p>Aufrufe</p>
         </li>
-        <li class="short"style="display:inline-block;">
-            <img src="ShortThumbnail.jpg" style="height: 500px" class="Short"> <br>
+        <li class="short">
+            <img src="Shortthumbnail.jpg" class="Short"> <br>
             <h4>ShortTitel</h4>
             <p>Aufrufe</p>
         </li>
 
     </ul>
 </nav>
+<nav>
+    <ul>
+        <li class="video-list">
+            
+            <section>
+                <img src="thumbnail.jpg" class="thumbnail"></br>
+                <img src="Profileimg.png" class="profile-img">
+                <h1 >Videotitel</h1>  
+                <p >Name</p>
+                <p >Aufrufzahl</p>
+                <p>Datum</p>
+            </section>  
+        </li>  
+        <li class="video-list">
+            
+            <section>
+                <img src="thumbnail.jpg" class="thumbnail"></br>
+                <img src="Profileimg.png" class="profile-img">
+                <h1>Videotitel</h1>  
+                <p>Name</p>
+                <p>Aufrufzahl</p>
+                <p>Datum</p>
+            </section>  
+        </li> 
+        <li class="video-list" >
+            
+            <section>
+                <img src="thumbnail.jpg" class="thumbnail"></br>
+                <img src="Profileimg.png"  class="profile-img">
+                <h1>Videotitel</h1>  
+                <p>Name</p>
+                <p>Aufrufzahl</p>
+                <p>Datum</p>
+            </section>  
+        </li>
+        <li class="video-list">
+            
+            <section>
+                <img src="thumbnail.jpg" class="thumbnail"></br>
+                <img src="Profileimg.png"  class="profile-img">
+                <h1>Videotitel</h1>  
+                <p>Name</p>
+                <p>Aufrufzahl</p>
+                <p>Datum</p>
+            </section>  
+        </li>
+         
+    
+   
+        
+        <li class="video-list">
+            
+            <section>
+                <img src="thumbnail.jpg" class="thumbnail"></br>
+                <img src="Profileimg.png"  class="profile-img">
+                <h1>Videotitel</h1>  
+                <p >Name</p>
+                <p >Aufrufzahl</p>
+                <p>Datum</p>
+            </section>  
+        </li>
+        <li class="video-list">
+            
+            <section>
+                <img src="thumbnail.jpg" class="thumbnail"></br>
+                <img src="Profileimg.png" class="profile-img">
+                <h1>Videotitel</h1>  
+                <p >Name</p>
+                <p >Aufrufzahl</p>
+                <p>Datum</p>
+            </section>  
+        </li>
+        <li class="video-list">
+            
+            <section>
+                <img src="thumbnail.jpg" class="thumbnail"></br>
+                <img src="Profileimg.png" class="profile-img">
+                <h1>Videotitel</h1>  
+                <p>Name</p>
+                <p>Aufrufzahl</p>
+                <p>Datum</p>
+            </section>  
+        </li>
+        <li class="video-list">
+            
+            <section>
+                <img src="thumbnail.jpg" class="thumbnail"></br>
+                <img src="Profileimg.png"  class="profile-img">
+                <h1>Videotitel</h1>  
+                <p>Name</p>
+                <p>Aufrufzahl</p>
+                <p>Datum</p>
+            </section>  
+        </li>
+    </ul>
 
-<li class="VideoList" style="margin-top:80px;">
-                
-    <button>
-        <img src="Thumbnail.jpg" style=" width:300px;"></br>
-        <img src="Profileimg.png" style=" width:50px; ">
-        <h1 style="text-align: left;">Videotitel</h1>  
-        <p style="text-align: left;">Name</p>
-        <p style="text-align: left;">Aufrufzahl</p>
-        <p style="text-align: right;">Datum</p>
-    </button>    
-    <button>
-        <img src="Thumbnail.jpg" style=" width:300px;"></br>
-        <img src="Profileimg.png" style=" width:50px; ">
-        <h1 style="text-align: left;">Videotitel</h1>  
-        <p style="text-align: left;">Name</p>
-        <p style="text-align: left;">Aufrufzahl</p>
-        <p style="text-align: right;">Datum</p>
-    </button>    
-    <button>
-        <img src="Thumbnail.jpg" style=" width:300px;"></br>
-        <img src="Profileimg.png" style=" width:50px; ">
-        <h1 style="text-align: left;">Videotitel</h1>  
-        <p style="text-align: left;">Name</p>
-        <p style="text-align: left;">Aufrufzahl</p>
-        <p style="text-align: right;">Datum</p>
-    </button>    
-    <button>
-        <img src="Thumbnail.jpg" style=" width:300px;"></br>
-        <img src="Profileimg.png" style=" width:50px; ">
-        <h1 style="text-align: left;">Videotitel</h1>  
-        <p style="text-align: left;">Name</p>
-        <p style="text-align: left;">Aufrufzahl</p>
-        <p style="text-align: right;">Datum</p>
-    </button>  
-</li>  
+</nav>
 
+<!-- Listitems benötigen noch Art der Liste als Rahmen, alles was ein navigationselement ist, welches auf einen 
+    anderen Part der Seite verweisst, sollte es als linkelement gekennzeichnet sein. Videovorschauteil ist kein button, (+link) sondern eine Sektion. <h1> bis <h6> angucken
+        Namen/bezeichnungen werden komplett klein und mit '-' geschrieben.-->
 </body>
 
 
