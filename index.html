@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube</title>
     <style>
-        /* .VideoImg{
+        .VideoImg{
             
             width:400px;
         }
@@ -42,7 +42,15 @@
         .headeritem {
             margin: 0 10px;
         }
-    
+        #Notification-icon{
+            margin-left: 90% ;
+            position: absolute;
+            
+        }
+        #profile-icon{
+            margin-left: 95% ;
+            position: absolute;
+        }
         .icon-round {
             background-color: transparent;
             border-radius: 50%;
@@ -70,12 +78,12 @@
             height: 100%;
             display: flex;
             
-            position: relative;
+            position: absolute;
             
         }
     
         #searchbar {
-            margin-left:500px;
+            margin-left:30%;
             width: 600px;
             height: 40px;
             padding: 0 20px;
@@ -85,6 +93,8 @@
             font-size: medium;
             border-width:1px;
             position: absolute;
+            border-radius:50px;
+            
         }
         #search-icon{
            
@@ -95,7 +105,7 @@
            
         }
         #searchbutton{
-            margin-left:80%;
+            margin-left: calc(30% + 550px);
             position:absolute;
             border-radius: 0 40px 40px 0; 
             background:#e7e3e3;
@@ -107,6 +117,13 @@
         .rechteck-icon{
             height: 3%;
             width: 3%;
+            padding: 1%;
+            transition: all 150ms ease-in-out;
+        }
+        .rechteck-icon:hover {
+            background-color: rgb(235, 234, 234);
+            box-shadow: 0 0 3px 0 grey inset, 0 0 3px 1px grey;
+            border-width: 1px;
         }
         .thumbnail{
           width: 30%;
@@ -114,6 +131,7 @@
         }
         .video-list{
             display: inline-flex;
+            
         }
         .profile-img{
             width: 40px;
@@ -127,7 +145,15 @@
             border: 1px solid black; 
             display:inline-flexbox;
             height: 500px;
-        } */
+        }
+        .border-left{
+
+            list-style-type: none;
+            padding-left: 15px;
+        }
+        .genres{
+            margin-left:30%;
+        }
     </style>
 </head>
 
@@ -136,18 +162,19 @@
     Menüpunkt, logo, suchleiste(textinput), Notifications, Profilvorschau, genres -->
     <header>
         <div id="menu" class="headerclass">
-             <img id="imgmenu-icon" class="icon-round" src="menu-icon.png";>
+             <img id="imgmenu-icon" class="icon-round" src="menuIcon.png";>
             
              <img src=""> <img id="img-logo" src="YTLogo.png" ;>
 
              <input id="searchbar" class="headeritem"> 
-             <button id="searchbutton"><img id="search-icon" src="search-icon.svg";></button>
+             <button id="searchbutton"><img id="search-icon" src="searchIcon.svg";></button>
 
-             <img id="NotificationIcon" class="icon-round" src="notificationIcon.png" ;> 
+             <img id="Notification-icon" class="icon-round" src="notificationIcon.png" ;> 
 
              <img id="profile-icon" class="icon-round" src="Profileimg.png";>
         </div>
         <nav>
+            <div class="genres">
             <button>Alle</button>
             <button>Gaming</button>
             <button>Musik</button>
@@ -156,7 +183,7 @@
             <button>Action-Adventures</button>
             <button>Cartoons</button>
             <button>Kürzlich Hochgeladen</button>
-
+            </div>
         </nav>
     </header>
     <nav>
@@ -169,50 +196,50 @@
     </nav>
         
    <nav>
-        <ul>
+        <ul class="list">
             <li class="video-list">
                 
-                <section>
-                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                <a href="https://www.youtube.com">
+                    <img src="thumbnail.jpg" class="thumbnail">
                     <img src="Profileimg.png" class="profile-img">
-                    <h1 >Videotitel</h1>  
+                    <h4 >Videotitel</h4>  
                     <p >Name</p>
                     <p >Aufrufzahl</p>
                     <p>Datum</p>
-                </section>  
+                </a>  
             </li>  
             <li class="video-list">
                 
-                <section>
-                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                <a href="https://www.youtube.com">
+                    <img src="thumbnail.jpg" class="thumbnail">
                     <img src="Profileimg.png" class="profile-img">
-                    <h1>Videotitel</h1>  
+                    <h4>Videotitel</h4>  
                     <p>Name</p>
                     <p>Aufrufzahl</p>
                     <p>Datum</p>
-                </section>  
+                </a>
             </li> 
             <li class="video-list" >
                 
-                <section>
-                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                <a href="https://www.youtube.com">
+                    <img src="thumbnail.jpg" class="thumbnail">
                     <img src="Profileimg.png"  class="profile-img">
-                    <h1>Videotitel</h1>  
+                    <h4>Videotitel</h4>  
                     <p>Name</p>
                     <p>Aufrufzahl</p>
                     <p>Datum</p>
-                </section>  
+                </a>
             </li>
             <li class="video-list">
                 
-                <section>
-                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                <a href="https://www.youtube.com">
+                    <img src="thumbnail.jpg" class="thumbnail">
                     <img src="Profileimg.png"  class="profile-img">
-                    <h1>Videotitel</h1>  
+                    <h4>Videotitel</h4>  
                     <p>Name</p>
                     <p>Aufrufzahl</p>
                     <p>Datum</p>
-                </section>  
+                </a>
             </li>
              
         
@@ -220,47 +247,47 @@
             
             <li class="video-list">
                 
-                <section>
-                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                <a href="https://www.youtube.com">
+                    <img src="thumbnail.jpg" class="thumbnail">
                     <img src="Profileimg.png"  class="profile-img">
-                    <h1>Videotitel</h1>  
+                    <h4>Videotitel</h4>  
                     <p >Name</p>
                     <p >Aufrufzahl</p>
                     <p>Datum</p>
-                </section>  
+                </a>
             </li>
             <li class="video-list">
                 
-                <section>
-                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                <a href="https://www.youtube.com">
+                    <img src="thumbnail.jpg" class="thumbnail">
                     <img src="Profileimg.png" class="profile-img">
-                    <h1>Videotitel</h1>  
+                    <h4>Videotitel</h4>  
                     <p >Name</p>
                     <p >Aufrufzahl</p>
                     <p>Datum</p>
-                </section>  
+                </a>
             </li>
             <li class="video-list">
                 
-                <section>
-                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                <a href="https://www.youtube.com">
+                    <img src="thumbnail.jpg" class="thumbnail">
                     <img src="Profileimg.png" class="profile-img">
-                    <h1>Videotitel</h1>  
+                    <h4>Videotitel</h4>  
                     <p>Name</p>
                     <p>Aufrufzahl</p>
                     <p>Datum</p>
-                </section>  
+                </a>
             </li>
             <li class="video-list">
                 
-                <section>
-                    <img src="thumbnail.jpg" class="thumbnail"></br>
+                <a href="https://www.youtube.com">
+                    <img src="thumbnail.jpg" class="thumbnail">
                     <img src="Profileimg.png"  class="profile-img">
-                    <h1>Videotitel</h1>  
+                    <h4>Videotitel</h4>  
                     <p>Name</p>
                     <p>Aufrufzahl</p>
                     <p>Datum</p>
-                </section>  
+                </a>
             </li>
         </ul>
 
@@ -274,27 +301,27 @@
 <nav>
     <ul style="display:inline;">
         <li class="short" >
-            <img src="Shortthumbnail.jpg" class="short"> <br>
+            <img src="Shortthumbnail.jpg" class="short"> 
             <h4>ShortTitel</h4>
             <p>Aufrufe</p>
         </li>
         <li class="short">
-            <img src="Shortthumbnail.jpg" class="Short"> <br>
+            <img src="Shortthumbnail.jpg" class="Short"> 
             <h4>ShortTitel</h4>
             <p>Aufrufe</p>
         </li>
         <li class="short">
-            <img src="Shortthumbnail.jpg" class="Short"> <br>
+            <img src="Shortthumbnail.jpg" class="Short"> 
             <h4>ShortTitel</h4>
             <p>Aufrufe</p>
         </li>
         <li class="short">
-            <img src="Shortthumbnail.jpg"class="Short"> <br>
+            <img src="Shortthumbnail.jpg"class="Short"> 
             <h4>ShortTitel</h4>
             <p>Aufrufe</p>
         </li>
         <li class="short">
-            <img src="Shortthumbnail.jpg" class="Short"> <br>
+            <img src="Shortthumbnail.jpg" class="Short"> 
             <h4>ShortTitel</h4>
             <p>Aufrufe</p>
         </li>
@@ -305,47 +332,47 @@
     <ul>
         <li class="video-list">
             
-            <section>
-                <img src="thumbnail.jpg" class="thumbnail"></br>
+            <a href="https://www.youtube.com">
+                <img src="thumbnail.jpg" class="thumbnail">
                 <img src="Profileimg.png" class="profile-img">
-                <h1 >Videotitel</h1>  
+                <h4 >Videotitel</h4>  
                 <p >Name</p>
                 <p >Aufrufzahl</p>
                 <p>Datum</p>
-            </section>  
+            </a>
         </li>  
         <li class="video-list">
             
-            <section>
-                <img src="thumbnail.jpg" class="thumbnail"></br>
+            <a href="https://www.youtube.com">
+                <img src="thumbnail.jpg" class="thumbnail">
                 <img src="Profileimg.png" class="profile-img">
-                <h1>Videotitel</h1>  
+                <h4>Videotitel</h4>  
                 <p>Name</p>
                 <p>Aufrufzahl</p>
                 <p>Datum</p>
-            </section>  
+            </a>
         </li> 
         <li class="video-list" >
             
-            <section>
-                <img src="thumbnail.jpg" class="thumbnail"></br>
+            <a href="https://www.youtube.com">
+                <img src="thumbnail.jpg" class="thumbnail">
                 <img src="Profileimg.png"  class="profile-img">
-                <h1>Videotitel</h1>  
+                <h4>Videotitel</h4>  
                 <p>Name</p>
                 <p>Aufrufzahl</p>
                 <p>Datum</p>
-            </section>  
+            </a>
         </li>
         <li class="video-list">
             
-            <section>
-                <img src="thumbnail.jpg" class="thumbnail"></br>
+            <a href="https://www.youtube.com">
+                <img src="thumbnail.jpg" class="thumbnail">
                 <img src="Profileimg.png"  class="profile-img">
-                <h1>Videotitel</h1>  
+                <h4>Videotitel</h4>  
                 <p>Name</p>
                 <p>Aufrufzahl</p>
                 <p>Datum</p>
-            </section>  
+            </a>
         </li>
          
     
@@ -353,54 +380,54 @@
         
         <li class="video-list">
             
-            <section>
-                <img src="thumbnail.jpg" class="thumbnail"></br>
+            <a href="https://www.youtube.com">
+                <img src="thumbnail.jpg" class="thumbnail">
                 <img src="Profileimg.png"  class="profile-img">
-                <h1>Videotitel</h1>  
+                <h4>Videotitel</h4>  
                 <p >Name</p>
                 <p >Aufrufzahl</p>
                 <p>Datum</p>
-            </section>  
+            </a>
         </li>
         <li class="video-list">
             
-            <section>
-                <img src="thumbnail.jpg" class="thumbnail"></br>
+            <a href="https://www.youtube.com">
+                <img src="thumbnail.jpg" class="thumbnail">
                 <img src="Profileimg.png" class="profile-img">
-                <h1>Videotitel</h1>  
+                <h4>Videotitel</h4>  
                 <p >Name</p>
                 <p >Aufrufzahl</p>
                 <p>Datum</p>
-            </section>  
+            </a>
         </li>
         <li class="video-list">
             
-            <section>
-                <img src="thumbnail.jpg" class="thumbnail"></br>
+            <a href="https://www.youtube.com">
+                <img src="thumbnail.jpg" class="thumbnail">
                 <img src="Profileimg.png" class="profile-img">
-                <h1>Videotitel</h1>  
+                <h4>Videotitel</h4>  
                 <p>Name</p>
                 <p>Aufrufzahl</p>
                 <p>Datum</p>
-            </section>  
+            </a>
         </li>
         <li class="video-list">
             
-            <section>
-                <img src="thumbnail.jpg" class="thumbnail"></br>
+            <a href="https://www.youtube.com">
+                <img src="thumbnail.jpg" class="thumbnail">
                 <img src="Profileimg.png"  class="profile-img">
-                <h1>Videotitel</h1>  
+                <h4>Videotitel</h4>  
                 <p>Name</p>
                 <p>Aufrufzahl</p>
                 <p>Datum</p>
-            </section>  
+            </a>
         </li>
     </ul>
 
 </nav>
 
 <!-- Listitems benötigen noch Art der Liste als Rahmen, alles was ein navigationselement ist, welches auf einen 
-    anderen Part der Seite verweisst, sollte es als linkelement gekennzeichnet sein. Videovorschauteil ist kein button, (+link) sondern eine Sektion. <h1> bis <h6> angucken
+    anderen Part der Seite verweisst, sollte es als linkelement gekennzeichnet sein. Videovorschauteil ist kein button, (+link) sondern eine Sektion. <h4> bis <h6> angucken
         Namen/bezeichnungen werden komplett klein und mit '-' geschrieben.-->
 </body>
 
