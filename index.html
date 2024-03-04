@@ -5,53 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube</title>
     <style>
-        
-        .VideoImg{
-            width:400px;
+        #imgmenu-icon{
+            margin-left: 20px;
         }
-       .video-item{
-        border: 1px solid black; 
-        height:120%;
-        width:192px;
-        padding-bottom:50px;
-       }
-       
-       .videos{
-        margin-left: 100px;
-        
-        
-        margin-top:100px;
-        
-     }
-       header {
+        #short-icon {
+            width: 8%;
+            height: auto;
+        }
+        .VideoImg {
+            width: 400px;
+        }
+        .video-item {
+            border: 1px solid black; 
+            height: 120%;
+            width: 192px;
+            padding-bottom: 50px;
+        }
+        .videos {
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+        header {
+            margin-top:10px;
             position: fixed;
             top: 0;
             width: 100%;
             background-color: #fff; 
             z-index: 1000; 
-    
         }
-    
         .headerclass {
             display: flex;
             align-items: center;
             height: 50px;
-            ;
         }
-    
         .headeritem {
             margin: 0 10px;
         }
-        #Notification-icon{
-            margin-left: 90% ;
+        #Notification-icon {
+            margin-left: 90%;
             position: absolute;
-            
         }
-        #profile-icon{
-            margin-left: 95% ;
+        #profile-icon {
+            margin-left: 95%;
             position: absolute;
         }
         .icon-round {
+           
             background-color: transparent;
             border-radius: 50%;
             transition: all 150ms ease-in-out;
@@ -60,96 +59,126 @@
             padding: 5px;
             cursor: pointer;
         }
-    
         .icon-round:hover {
             background-color: rgb(235, 234, 234);
             box-shadow: 0 0 3px 0 grey inset, 0 0 3px 1px grey;
             border-width: 1px;
         }
-    
         #img-logo {
             width: auto;
             height: 80%;
             cursor: pointer;
             margin-left: 2%;
         }
-    
         #suchleiste {
             flex-grow: 1;
             height: 100%;
             display: flex;
             position: absolute;
-            
         }
-    
         #searchbar {
-            margin-left:30%;
+            
+            margin-left: calc(30% - 190px);
             width: 600px;
             height: 40px;
             padding: 0 20px;
             box-sizing: border-box; 
-            border-style:solid;
+            border-style: solid;
             cursor: text;
             font-size: medium;
-            border-width:1px;
+            border-width: 1px;
             position: absolute;
-            border-radius:50px;
-            
+            border-radius: 50px;
         }
-        #search-icon{
+        #search-icon {
             background-color: #e7e3e3;
-            height:20px;
-            width:20px;
+            height: 20px;
+            width: 20px;
         }
-        #searchbutton{
-            margin-left: calc(30% + 550px);
-            position:absolute;
+        #search{
+           
+            height: 40px;
+            width: 100%;
+
+        }
+        
+        #searchbutton {
+            margin-left: calc(30% + 360px);
+            position: absolute;
             border-radius: 0 40px 40px 0; 
-            background:#e7e3e3;
-            width:60px;
+            background: #e7e3e3;
+            width: 60px;
             border-right: 20%;
-            height: 45%;
-            border-width:1px;
+            height: 40px;
+            border-width: 1px;
         }
-        .rechteck-icon{
-            height: 3%;
-            width: 3%;
+        .rechteck-icon {
+            margin-top: 8%; 
+            height: 50%;
+            width: 50%;
             padding: 1%;
             transition: all 150ms ease-in-out;
+            margin-left:22%
         }
-        .rechteck-icon:hover {
+        
+       
+        .thumbnail {
+            width: 30%;
+            height: 50%;
+        }
+        .video-list {
+            margin-top:500px; /* ---------------------------------------------------------------------------------------------------------------------- */
+            display: inline-flex;
+        }
+        .profile-img {
+            width: 40px;
+        }
+        .border-left  {
+            margin-top: 5%;
+            position: fixed;
+            list-style-type: none;
+            padding-left: 0px;
+            left: 1; 
+            
+            width: 100px; 
+         
+        }
+        .border-left img{
+            height: 50px;
+            width: 50px;
+        }
+        .border-left h3{
+            font-family: Arial;
+            font-size:small;
+           
+            text-align: center;
+        }
+        .short {
+            border: 1px solid black; 
+            display: inline-flex;
+            height: 500px;
+        }
+        .genres {
+            margin-left: 30%;
+            height: 10%;
+            width: 100%;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: 100px; /* Damit der Inhalt nicht von der linken Leiste überdeckt wird */
+        }
+        .icon-effect{
+            width: 100%;
+            height: 120px;
+            border-radius: 5px;
+        }
+        .icon-effect:hover{
             background-color: rgb(235, 234, 234);
             box-shadow: 0 0 3px 0 grey inset, 0 0 3px 1px grey;
             border-width: 1px;
-        }
-        .thumbnail{
-          width: 30%;
-          height:50%;
-        }
-        .video-list{
-            display: inline-flex;
-            
-        }
-        .profile-img{
-            width: 40px;
-        }
-        .border-left{
-           
-            position:fixed;
-            list-style-type: none;
-            padding-left: 0px;
-            
-            
-        }
-        .short{
-           
-            border: 1px solid black; 
-            display: inline-flexbox;
-            height: 500px;
-        }
         
-        .genres{
-            margin-left:30%;
         }
     </style>
 </head>
@@ -159,263 +188,268 @@
     Menüpunkt, logo, suchleiste(textinput), Notifications, Profilvorschau, genres -->
     <header>
         <div id="menu" class="headerclass">
-             <img id="imgmenu-icon" class="icon-round" src="menuIcon.png";>
-            
-             <img src=""> <img id="img-logo" src="YTLogo.png" ;>
-
-             <input id="searchbar" class="headeritem"> 
-             <button id="searchbutton"><img id="search-icon" src="searchIcon.svg";></button>
-
+            <img id="imgmenu-icon" class="icon-round" src="menuIcon.png";>
+        
+            <img src=""> <img id="img-logo" src="YTLogo.png" ;>
+            <div id="search">
+            <input id="searchbar" class="headeritem"> 
+            <button id="searchbutton"><img id="search-icon" src="searchIcon.svg";></button>
+            </div>
              <img id="Notification-icon" class="icon-round" src="notificationIcon.png" ;> 
 
              <img id="profile-icon" class="icon-round" src="Profileimg.png";>
         </div>
+    
+        <nav>
+            <div class="genres">
+            <button>Alle</button>
+            <button>Gaming</button>
+            <button>Musik</button>
+            <button>Mixe</button>
+            <button>Live</button>
+            <button>Action-Adventures</button>
+            <button>Cartoons</button>
+            <button>Kürzlich Hochgeladen</button>
+            </div>
+        </nav>
     </header>
     <nav>
-        <div class="genres">
-        <button>Alle</button>
-        <button>Gaming</button>
-        <button>Musik</button>
-        <button>Mixe</button>
-        <button>Live</button>
-        <button>Action-Adventures</button>
-        <button>Cartoons</button>
-        <button>Kürzlich Hochgeladen</button>
-        </div>
-    </nav>
-    
-    <nav>
         <ul class="border-left">
-            <li><img class="rechteck-icon" id="startseite-img" src="Startseite.png" ; > </li>
-            <li><img class="rechteck-icon" id="shorts-img" src="shorts.png" ; ></li>
-            <li><img class="rechteck-icon" id="abos" src="Abos.png"; ></li>
-            <li><img class="rechteck-icon" id="mein-yt" src="MeinYoutube.png";></li>        
+            <li class="icon-effect"><a  href="https://www.youtube.com" ><img class="rechteck-icon" id="startseite-img" src="Startseite.png" ; > <h3>Startseite</h3> </a></li>
+            <li class="icon-effect"><a  href="https://www.youtube.com" ><img class="rechteck-icon" id="shorts-img" src="shorts.png" ; ><h3>Shorts</h3></a></li>
+            <li class="icon-effect"><a  href="https://www.youtube.com" ><img class="rechteck-icon" id="abos" src="Abos.png"; ><h3>Abos</h3></a></li>
+            <li class="icon-effect"><a  href="https://www.youtube.com" ><img class="rechteck-icon" id="mein-yt" src="MeinYoutube.png";><h3>mein<br> Youtube</h3></a></li>        
         </ul>
     </nav>
+    <div class="content">
+        <nav>
+                <ul class="list">
+                    <li class="video-list">
+                        <a href="https://www.youtube.com">
+                            <img src="thumbnail.jpg" class="thumbnail">
+                            <img src="Profileimg.png" class="profile-img">
+                            <h4 >Videotitel</h4>  
+                            <p >Name</p>
+                            <p >Aufrufzahl</p>
+                            <p>Datum</p>
+                        </a>  
+                    </li>  
+                    <li class="video-list">
+                        <a href="https://www.youtube.com">
+                            <img src="thumbnail.jpg" class="thumbnail">
+                            <img src="Profileimg.png" class="profile-img">
+                            <h4 >Videotitel</h4>  
+                            <p >Name</p>
+                            <p >Aufrufzahl</p>
+                            <p>Datum</p>
+                        </a>  
+                    </li>  
+                    <li class="video-list">
+                        <a href="https://www.youtube.com">
+                            <img src="thumbnail.jpg" class="thumbnail">
+                            <img src="Profileimg.png" class="profile-img">
+                            <h4 >Videotitel</h4>  
+                            <p >Name</p>
+                            <p >Aufrufzahl</p>
+                            <p>Datum</p>
+                        </a>  
+                    </li>  
+                    <li class="video-list">
+                        <a href="https://www.youtube.com">
+                            <img src="thumbnail.jpg" class="thumbnail">
+                            <img src="Profileimg.png" class="profile-img">
+                            <h4 >Videotitel</h4>  
+                            <p >Name</p>
+                            <p >Aufrufzahl</p>
+                            <p>Datum</p>
+                        </a>  
+                    </li>  
+                    
+                
+            
+                    
+                    <li class="video-list">
+                        <a href="https://www.youtube.com">
+                            <img src="thumbnail.jpg" class="thumbnail">
+                            <img src="Profileimg.png" class="profile-img">
+                            <h4 >Videotitel</h4>  
+                            <p >Name</p>
+                            <p >Aufrufzahl</p>
+                            <p>Datum</p>
+                        </a>  
+                    </li>  
+                    <li class="video-list">
+                        <a href="https://www.youtube.com">
+                            <img src="thumbnail.jpg" class="thumbnail">
+                            <img src="Profileimg.png" class="profile-img">
+                            <h4 >Videotitel</h4>  
+                            <p >Name</p>
+                            <p >Aufrufzahl</p>
+                            <p>Datum</p>
+                        </a>  
+                    </li>  
+                    <li class="video-list">
+                        <a href="https://www.youtube.com">
+                            <img src="thumbnail.jpg" class="thumbnail">
+                            <img src="Profileimg.png" class="profile-img">
+                            <h4 >Videotitel</h4>  
+                            <p >Name</p>
+                            <p >Aufrufzahl</p>
+                            <p>Datum</p>
+                        </a>  
+                    </li>  
+                    <li class="video-list">
+                        <a href="https://www.youtube.com">
+                            <img src="thumbnail.jpg" class="thumbnail">
+                            <img src="Profileimg.png" class="profile-img">
+                            <h4 >Videotitel</h4>  
+                            <p >Name</p>
+                            <p >Aufrufzahl</p>
+                            <p>Datum</p>
+                        </a>  
+                    </li>  
+                </ul>
+
+                
+
+        </nav>
+        <nav>
+            <img id="short-icon" src="shorts.png">
+            <h2>Shorts</h2>
+        </nav>
+        <nav>
+            <ul style="display:inline;">
+                <li class="short" >
+                <a href="www.youtube.com/shorts"> <img src="Shortthumbnail.jpg" class="short"> 
+                    <h4>ShortTitel</h4>
+                    <p>Aufrufe</p>
+                </a>
+                </li>
+                <li class="short" >
+                    <a href="www.youtube.com/shorts"> <img src="Shortthumbnail.jpg" class="short"> 
+                    <h4>ShortTitel</h4>
+                    <p>Aufrufe</p>
+                </a>
+                </li>
+                <li class="short" >
+                    <a href="www.youtube.com/shorts"> <img src="Shortthumbnail.jpg" class="short"> 
+                    <h4>ShortTitel</h4>
+                    <p>Aufrufe</p>
+                </a>
+                </li>
+                <li class="short" >
+                    <a href="www.youtube.com/shorts"> <img src="Shortthumbnail.jpg" class="short"> 
+                    <h4>ShortTitel</h4>
+                    <p>Aufrufe</p>
+                </a>
+                </li>
+                <li class="short" >
+                    <a href="www.youtube.com/shorts"> <img src="Shortthumbnail.jpg" class="short"> 
+                    <h4>ShortTitel</h4>
+                    <p>Aufrufe</p>
+                </a>
+                </li>
+
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li class="video-list">
+                    
+                    <a href="https://www.youtube.com">
+                        <img src="thumbnail.jpg" class="thumbnail">
+                        <img src="Profileimg.png" class="profile-img">
+                        <h4 >Videotitel</h4>  
+                        <p >Name</p>
+                        <p >Aufrufzahl</p>
+                        <p>Datum</p>
+                    </a>
+                </li>  
+                <li class="video-list">
+                    
+                    <a href="https://www.youtube.com">
+                        <img src="thumbnail.jpg" class="thumbnail">
+                        <img src="Profileimg.png" class="profile-img">
+                        <h4>Videotitel</h4>  
+                        <p>Name</p>
+                        <p>Aufrufzahl</p>
+                        <p>Datum</p>
+                    </a>
+                </li> 
+                <li class="video-list" >
+                    
+                    <a href="https://www.youtube.com">
+                        <img src="thumbnail.jpg" class="thumbnail">
+                        <img src="Profileimg.png"  class="profile-img">
+                        <h4>Videotitel</h4>  
+                        <p>Name</p>
+                        <p>Aufrufzahl</p>
+                        <p>Datum</p>
+                    </a>
+                </li>
+                <li class="video-list">
+                    
+                    <a href="https://www.youtube.com">
+                        <img src="thumbnail.jpg" class="thumbnail">
+                        <img src="Profileimg.png"  class="profile-img">
+                        <h4>Videotitel</h4>  
+                        <p>Name</p>
+                        <p>Aufrufzahl</p>
+                        <p>Datum</p>
+                    </a>
+                </li>
+                
+            
         
-   <nav>
-        <ul class="list">
-            <li class="video-list">
-                <a href="https://www.youtube.com">
-                    <img src="thumbnail.jpg" class="thumbnail">
-                    <img src="Profileimg.png" class="profile-img">
-                    <h4 >Videotitel</h4>  
-                    <p >Name</p>
-                    <p >Aufrufzahl</p>
-                    <p>Datum</p>
-                </a>  
-            </li>  
-            <li class="video-list">
-                <a href="https://www.youtube.com">
-                    <img src="thumbnail.jpg" class="thumbnail">
-                    <img src="Profileimg.png" class="profile-img">
-                    <h4 >Videotitel</h4>  
-                    <p >Name</p>
-                    <p >Aufrufzahl</p>
-                    <p>Datum</p>
-                </a>  
-            </li>  
-            <li class="video-list">
-                <a href="https://www.youtube.com">
-                    <img src="thumbnail.jpg" class="thumbnail">
-                    <img src="Profileimg.png" class="profile-img">
-                    <h4 >Videotitel</h4>  
-                    <p >Name</p>
-                    <p >Aufrufzahl</p>
-                    <p>Datum</p>
-                </a>  
-            </li>  
-            <li class="video-list">
-                <a href="https://www.youtube.com">
-                    <img src="thumbnail.jpg" class="thumbnail">
-                    <img src="Profileimg.png" class="profile-img">
-                    <h4 >Videotitel</h4>  
-                    <p >Name</p>
-                    <p >Aufrufzahl</p>
-                    <p>Datum</p>
-                </a>  
-            </li>  
-             
-        
-       
-            
-            <li class="video-list">
-                <a href="https://www.youtube.com">
-                    <img src="thumbnail.jpg" class="thumbnail">
-                    <img src="Profileimg.png" class="profile-img">
-                    <h4 >Videotitel</h4>  
-                    <p >Name</p>
-                    <p >Aufrufzahl</p>
-                    <p>Datum</p>
-                </a>  
-            </li>  
-            <li class="video-list">
-                <a href="https://www.youtube.com">
-                    <img src="thumbnail.jpg" class="thumbnail">
-                    <img src="Profileimg.png" class="profile-img">
-                    <h4 >Videotitel</h4>  
-                    <p >Name</p>
-                    <p >Aufrufzahl</p>
-                    <p>Datum</p>
-                </a>  
-            </li>  
-            <li class="video-list">
-                <a href="https://www.youtube.com">
-                    <img src="thumbnail.jpg" class="thumbnail">
-                    <img src="Profileimg.png" class="profile-img">
-                    <h4 >Videotitel</h4>  
-                    <p >Name</p>
-                    <p >Aufrufzahl</p>
-                    <p>Datum</p>
-                </a>  
-            </li>  
-            <li class="video-list">
-                <a href="https://www.youtube.com">
-                    <img src="thumbnail.jpg" class="thumbnail">
-                    <img src="Profileimg.png" class="profile-img">
-                    <h4 >Videotitel</h4>  
-                    <p >Name</p>
-                    <p >Aufrufzahl</p>
-                    <p>Datum</p>
-                </a>  
-            </li>  
-        </ul>
+                
+                <li class="video-list">
+                    
+                    <a href="https://www.youtube.com">
+                        <img src="thumbnail.jpg" class="thumbnail">
+                        <img src="Profileimg.png"  class="profile-img">
+                        <h4>Videotitel</h4>  
+                        <p >Name</p>
+                        <p >Aufrufzahl</p>
+                        <p>Datum</p>
+                    </a>
+                </li>
+                <li class="video-list">
+                    
+                    <a href="https://www.youtube.com">
+                        <img src="thumbnail.jpg" class="thumbnail">
+                        <img src="Profileimg.png" class="profile-img">
+                        <h4>Videotitel</h4>  
+                        <p >Name</p>
+                        <p >Aufrufzahl</p>
+                        <p>Datum</p>
+                    </a>
+                </li>
+                <li class="video-list">
+                    
+                    <a href="https://www.youtube.com">
+                        <img src="thumbnail.jpg" class="thumbnail">
+                        <img src="Profileimg.png" class="profile-img">
+                        <h4>Videotitel</h4>  
+                        <p>Name</p>
+                        <p>Aufrufzahl</p>
+                        <p>Datum</p>
+                    </a>
+                </li>
+                <li class="video-list">
+                    
+                    <a href="https://www.youtube.com">
+                        <img src="thumbnail.jpg" class="thumbnail">
+                        <img src="Profileimg.png"  class="profile-img">
+                        <h4>Videotitel</h4>  
+                        <p>Name</p>
+                        <p>Aufrufzahl</p>
+                        <p>Datum</p>
+                    </a>
+                </li>
+            </ul>
 
-        
-
-   </nav>
-   <nav >
-    <img src="shorts.png">
-    <h2>Shorts</h2>
-</nav>
-<nav>
-    <ul style="display:inline;">
-        <li class="short" >
-            <img src="Shortthumbnail.jpg" class="short"> 
-            <h4>ShortTitel</h4>
-            <p>Aufrufe</p>
-        </li>
-        <li class="short">
-            <img src="Shortthumbnail.jpg" class="Short"> 
-            <h4>ShortTitel</h4>
-            <p>Aufrufe</p>
-        </li>
-        <li class="short">
-            <img src="Shortthumbnail.jpg" class="Short"> 
-            <h4>ShortTitel</h4>
-            <p>Aufrufe</p>
-        </li>
-        <li class="short">
-            <img src="Shortthumbnail.jpg"class="Short"> 
-            <h4>ShortTitel</h4>
-            <p>Aufrufe</p>
-        </li>
-        <li class="short">
-            <img src="Shortthumbnail.jpg" class="Short"> 
-            <h4>ShortTitel</h4>
-            <p>Aufrufe</p>
-        </li>
-
-    </ul>
-</nav>
-<nav>
-    <ul>
-        <li class="video-list">
-            
-            <a href="https://www.youtube.com">
-                <img src="thumbnail.jpg" class="thumbnail">
-                <img src="Profileimg.png" class="profile-img">
-                <h4 >Videotitel</h4>  
-                <p >Name</p>
-                <p >Aufrufzahl</p>
-                <p>Datum</p>
-            </a>
-        </li>  
-        <li class="video-list">
-            
-            <a href="https://www.youtube.com">
-                <img src="thumbnail.jpg" class="thumbnail">
-                <img src="Profileimg.png" class="profile-img">
-                <h4>Videotitel</h4>  
-                <p>Name</p>
-                <p>Aufrufzahl</p>
-                <p>Datum</p>
-            </a>
-        </li> 
-        <li class="video-list" >
-            
-            <a href="https://www.youtube.com">
-                <img src="thumbnail.jpg" class="thumbnail">
-                <img src="Profileimg.png"  class="profile-img">
-                <h4>Videotitel</h4>  
-                <p>Name</p>
-                <p>Aufrufzahl</p>
-                <p>Datum</p>
-            </a>
-        </li>
-        <li class="video-list">
-            
-            <a href="https://www.youtube.com">
-                <img src="thumbnail.jpg" class="thumbnail">
-                <img src="Profileimg.png"  class="profile-img">
-                <h4>Videotitel</h4>  
-                <p>Name</p>
-                <p>Aufrufzahl</p>
-                <p>Datum</p>
-            </a>
-        </li>
-         
-    
-   
-        
-        <li class="video-list">
-            
-            <a href="https://www.youtube.com">
-                <img src="thumbnail.jpg" class="thumbnail">
-                <img src="Profileimg.png"  class="profile-img">
-                <h4>Videotitel</h4>  
-                <p >Name</p>
-                <p >Aufrufzahl</p>
-                <p>Datum</p>
-            </a>
-        </li>
-        <li class="video-list">
-            
-            <a href="https://www.youtube.com">
-                <img src="thumbnail.jpg" class="thumbnail">
-                <img src="Profileimg.png" class="profile-img">
-                <h4>Videotitel</h4>  
-                <p >Name</p>
-                <p >Aufrufzahl</p>
-                <p>Datum</p>
-            </a>
-        </li>
-        <li class="video-list">
-            
-            <a href="https://www.youtube.com">
-                <img src="thumbnail.jpg" class="thumbnail">
-                <img src="Profileimg.png" class="profile-img">
-                <h4>Videotitel</h4>  
-                <p>Name</p>
-                <p>Aufrufzahl</p>
-                <p>Datum</p>
-            </a>
-        </li>
-        <li class="video-list">
-            
-            <a href="https://www.youtube.com">
-                <img src="thumbnail.jpg" class="thumbnail">
-                <img src="Profileimg.png"  class="profile-img">
-                <h4>Videotitel</h4>  
-                <p>Name</p>
-                <p>Aufrufzahl</p>
-                <p>Datum</p>
-            </a>
-        </li>
-    </ul>
-
-</nav>
-
+        </nav>
+    </div>
 <!-- Listitems benötigen noch Art der Liste als Rahmen, alles was ein navigationselement ist, welches auf einen 
     anderen Part der Seite verweisst, sollte es als linkelement gekennzeichnet sein. Videovorschauteil ist kein button, (+link) sondern eine Sektion. <h4> bis <h6> angucken
         Namen/bezeichnungen werden komplett klein und mit '-' geschrieben.-->
