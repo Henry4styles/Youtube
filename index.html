@@ -69,12 +69,7 @@
         cursor: pointer;
         margin-left: 2%;
       }
-      #suchleiste {
-        flex-grow: 1;
-        height: 100%;
-        display: flex;
-        position: absolute;
-      }
+
       #searchbar {
         margin-left: calc(30% - 190px);
         width: 600px;
@@ -96,6 +91,7 @@
       #search {
         height: 40px;
         width: 100%;
+      
       }
 
       #search-button {
@@ -108,8 +104,8 @@
         height: 40px;
         border-width: 1px;
       }
-      .rechteck-icon {
-        margin-top: 8%;
+      .rectangle-icon {
+        
         height: 50%;
         width: 50%;
         padding: 1%;
@@ -134,7 +130,7 @@
         width: 40px;
       }
       .border-left {
-        margin-top: 5%;
+        margin-top: 10%;
         position: fixed;
         list-style-type: none;
         padding-left: 0px;
@@ -146,6 +142,7 @@
         width: 50px;
       }
       .border-left h3 {
+        
         font-family: Arial;
         font-size: small;
 
@@ -155,6 +152,7 @@
         border: 1px solid black;
         display: inline-flex;
         height: 500px;
+      
       }
       .genres {
         margin-left: 30%;
@@ -165,9 +163,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-left: 100px; /* Damit der Inhalt nicht von der linken Leiste überdeckt wird */
+        margin-left: 100px; 
       }
       .icon-effect {
+        
         width: 100%;
         height: 120px;
         border-radius: 5px;
@@ -177,6 +176,49 @@
         box-shadow: 0 0 3px 0 grey inset, 0 0 3px 1px grey;
         border-width: 1px;
             }
+          
+      @media only screen and (max-width: 1300px) {
+        
+        #searchbar {
+            margin-left: 10%;
+            width: 50%;
+          }
+
+          #search-button {
+            margin-left: calc(60% - 60px);
+            width: 60px;
+          }
+        
+         .rectangle-icon{
+            margin-top: 3em;
+         }
+        }
+        
+        @media only screen and (max-width: 400px)
+        { 
+            ul.short-list > li.short:nth-child(n+2){
+              display:none; 
+            }
+        }
+        @media only screen and (max-width: 700px)
+        { 
+          ul.short-list > li.short:nth-child(n+3){
+              display:none; 
+            }
+        }
+        @media only screen and (max-width: 1000px)
+        {
+          ul.short-list > li.short:nth-child(n+4){
+              display:none;   
+        }
+      }
+      @media only screen and (max-width: 1200px)
+        { 
+          ul.short-list > li.short:nth-child(n+5){
+              display:none; 
+        }
+      }
+      
     </style>
   </head>
 
@@ -224,8 +266,8 @@
         <li class="icon-effect">
           <a href="https://www.youtube.com"
             ><img
-              class="rechteck-icon"
-              id="startseite-img"
+              class="rectangle-icon"
+              id="homepage-img"
               src="Startseite.png"
               ;
             />
@@ -234,19 +276,19 @@
         </li>
         <li class="icon-effect">
           <a href="https://www.youtube.com"
-            ><img class="rechteck-icon" id="shorts-img" src="shorts.png" ; />
+            ><img class="rectangle-icon" id="shorts-img" src="shorts.png" ; />
             <h3>Shorts</h3></a
           >
         </li>
         <li class="icon-effect">
           <a href="https://www.youtube.com"
-            ><img class="rechteck-icon" id="abos" src="Abos.png" ; />
+            ><img class="rectangle-icon" id="abos" src="Abos.png" ; />
             <h3>Abos</h3></a
           >
         </li>
         <li class="icon-effect">
           <a href="https://www.youtube.com"
-            ><img class="rechteck-icon" id="mein-yt" src="MeinYoutube.png" ; />
+            ><img class="rectangle-icon" id="mein-yt" src="MeinYoutube.png" ; />
             <h3>
               mein<br />
               Youtube
@@ -346,36 +388,36 @@
         <h2>Shorts</h2>
       </nav>
       <nav>
-        <ul style="display: inline">
-          <li class="short">
+        <ul style="display: inline" class="short-list">
+          <li class="short" id="short1">
             <a href="www.youtube.com/shorts">
               <img src="Shortthumbnail.jpg" class="short" />
               <h4>ShortTitel</h4>
               <p>Aufrufe</p>
             </a>
           </li>
-          <li class="short">
+          <li class="short"id="short2">
             <a href="www.youtube.com/shorts">
               <img src="Shortthumbnail.jpg" class="short" />
               <h4>ShortTitel</h4>
               <p>Aufrufe</p>
             </a>
           </li>
-          <li class="short">
+          <li class="short"id="short3">
             <a href="www.youtube.com/shorts">
               <img src="Shortthumbnail.jpg" class="short" />
               <h4>ShortTitel</h4>
               <p>Aufrufe</p>
             </a>
           </li>
-          <li class="short">
+          <li class="short"id="short4">
             <a href="www.youtube.com/shorts">
               <img src="Shortthumbnail.jpg" class="short" />
               <h4>ShortTitel</h4>
               <p>Aufrufe</p>
             </a>
           </li>
-          <li class="short">
+          <li class="short"id="short5">
             <a href="www.youtube.com/shorts">
               <img src="Shortthumbnail.jpg" class="short" />
               <h4>ShortTitel</h4>
