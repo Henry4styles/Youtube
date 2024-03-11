@@ -4,9 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Youtube</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <style>
+      .genres{padding-top: 3em;}
       #imgmenu-icon {
         margin-left: 20px;
+      }
+      .genres .btn{
+        margin-left: 10px;
+        border-width: 1px;
+        border-style: solid;
+        border-color:grey;
+        border-radius: 10px;
+
       }
       #short-icon {
         width: 8%;
@@ -42,11 +53,12 @@
         margin: 0 10px;
       }
       #Notification-icon {
-        margin-left: 90%;
+        margin-left: 80%;
         position: absolute;
       }
       #profile-icon {
-        margin-left: 95%;
+        margin-left: 85%;
+        padding: 2px;
         position: absolute;
       }
       .icon-round {
@@ -65,7 +77,7 @@
       }
       #img-logo {
         width: auto;
-        height: 80%;
+        height: 2.5em;
         cursor: pointer;
         margin-left: 2%;
       }
@@ -228,37 +240,62 @@
     <!--Header Aufbau:
     Menüpunkt, logo, suchleiste(textinput), Notifications, Profilvorschau, genres -->
     <header>
-      <div id="menu" class="header-class">
-        <img id="imgmenu-icon" class="icon-round" src="menuIcon.png" ; />
+      <nav class="navbar navbar-expand-sm bg-light">
 
-        <img id="img-logo" src="YTLogo.png" ; />
-        <div id="search">
-          <input id="searchbar" class="headeritem" />
-          <button id="search-button">
-            <img id="search-icon" src="searchIcon.svg" ; />
-          </button>
+        <div class="container-fluid">
+          <!-- Links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <img id="imgmenu-icon" class="icon-round" src="menuIcon.png" ; />
+            </li>
+            <li class="nav-item">
+              <img id="img-logo" src="YTLogo.png" ; />
+            </li>
+            <li class="nav-item">
+              <div id="search">
+                <input id="searchbar" class="headeritem" />
+                <button id="search-button">
+                  <img id="search-icon" src="searchIcon.svg" ; />
+                </button>
+              </div>
+            </li>
+            <li class="nav-item">
+              <img
+                id="Notification-icon"
+                class="icon-round"
+                src="notificationIcon.png"
+                ;/>
+            </li>
+            <li class="nav-item">
+              <img id="profile-icon" class="icon-round" src="Profileimg.png" ; />
+
+
+            </li>
+            <li>
+              <div class="genres">
+                <button type="button" class="btn btn-secondary">Alle</button>
+                <button type="button" class="btn">Gaming</button>
+                <button type="button" class="btn">Musik</button>
+                <button type="button" class="btn">Mix</button>
+                <button type="button" class="btn">Live</button>
+                <button type="button" class="btn">Action-Adventures</button>
+                <button type="button" class="btn">Cartoons</button>
+                <button type="button" class="btn">Kürzlich Hochgeladen</button>
+             
+            </div>
+          </li>
+        </ul>
         </div>
-        <img
-          id="Notification-icon"
-          class="icon-round"
-          src="notificationIcon.png"
-          ;
-        />
+      
+      </nav>
+     
 
-        <img id="profile-icon" class="icon-round" src="Profileimg.png" ; />
-      </div>
+        
+       
+       
 
       <nav>
-        <div class="genres">
-          <button>Alle</button>
-          <button>Gaming</button>
-          <button>Musik</button>
-          <button>Mixe</button>
-          <button>Live</button>
-          <button>Action-Adventures</button>
-          <button>Cartoons</button>
-          <button>Kürzlich Hochgeladen</button>
-        </div>
+        
       </nav>
     </header>
     <nav>
