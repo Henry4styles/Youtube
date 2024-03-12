@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="de" >
   <head>
     <meta charset="UTF-8" />
@@ -124,31 +124,32 @@
     
     <!--Header Aufbau:
     Menüpunkt, logo, suchleiste(textinput), Notifications, Profilvorschau, genres -->
-    <header class=" bg-light" >
+    <header class="bg-light">
       
       <nav class="navbar  navbar-expand-sm">
-        <div class="container">
-          <div class="form-group row">
+        <div class="container w-100">
+          <div class="form-group row w-100">
             <div class="col-12">
-              <div class="navbar-nav ">
+              <div class="navbar-nav w-100 d-inline-flexbox">
                 <div class="nav-item ">
                   <img id="imgmenu-icon" class="icon-round" src="menuIcon.png" ; />
                 </div>
                 <div class="nav-item ">
                   <img  id="img-logo" src="YTLogo.png" ; />
                 </div>
-                <div class="nav-item ms-5">
-                  <div id="search">
-                    <input id="searchbar" class="headeritem " />
-                    <button id="search-button">
-                      <img id="search-icon" src="searchIcon.svg" ; />
-                    </button>
-                  </div>
+                <div class="nav-item ms-5 w-50">
+                 
+                                    
+                <div class="input-group mb-3 pe-5">
+                  <input type="text" class="form-control" placeholder="enter to search" aria-label="enter to search" aria-describedby="button-search">
+                  <button class="btn btn-outline-secondary" type="button" id="button-search">search</button>
                 </div>
-                <div class="nav-item">
+                 
+                </div>
+                <div class="nav-item float-right">
                   <img id="Notification-icon" class="icon-round" src="notificationIcon.png" ;/>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item ms-5 float-right">
                   <img id="profile-icon" class="icon-round" src="Profileimg.png" ; />
                 </div>
               </div>
