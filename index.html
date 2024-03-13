@@ -110,7 +110,9 @@
         width: 100%;
         height: 120px;
       }
-      #content{padding-top:150px;}
+      #content {
+        padding-top: 150px;
+      }
     </style>
   </head>
 
@@ -118,8 +120,8 @@
     <!--Header Aufbau:
     Menüpunkt, logo, suchleiste(textinput), Notifications, Profilvorschau, genres -->
     <header class="bg-light position-fixed">
-      <nav class="navbar navbar-expand-sm ">
-        <div class="container w-100 d-flex justify-content-center ">
+      <nav class="navbar navbar-expand-sm">
+        <div class="container w-100 d-flex justify-content-center">
           <div class="form-group row w-100">
             <div class="col-12">
               <div class="navbar-nav w-100 d-inline-flexbox">
@@ -138,7 +140,7 @@
                   <div class="input-group mb-3 pe-3">
                     <input
                       type="text"
-                      class="form-control "
+                      class="form-control"
                       placeholder="enter to search"
                       aria-label="enter to search"
                       aria-describedby="button-search"
@@ -206,21 +208,45 @@
       </div>
     </header>
     <!--------------------------left bar part--------------------------------------->
-    <div class="container d-fixed top-3 start-0">
-        <a src="" class="icon-effect">
+    <div class="col-1 position-fixed bg-dark" style="height: 100%">
+      <div class="d-flex flex-column">
+        <button
+          class="rectangle-icon btn position-relative mt-5 start-50 translate-middle"
+          type="submit"
+        >
+          <img src="Startseite.png" class="rectangle-icon" />
+        </button>
+
+        <button
+          class="rectangle-icon btn position-relative mt-5 start-50 translate-middle"
+          type="submit"
+        >
           <img src="MeinYoutube.png" class="rectangle-icon" />
+        </button>
 
+        <button
+          class="rectangle-icon btn position-relative mt-5 start-50 translate-middle"
+          type="submit"
+        >
+          <img src="shorts.png" class="rectangle-icon" />
+        </button>
 
+        <button
+          class="rectangle-icon btn position-relative mt-5 start-50 translate-middle"
+          type="submit"
+        >
+          <img src="Abos.png" class="rectangle-icon" />
+        </button>
+      </div>
     </div>
-
 
     <!------------------------------------------------------------------------------>
 
-
-
-
-
-    <div id="content" class="content container-fluid pt-auto">
+    <div
+      id="content"
+      class="content container-fluid"
+      style="padding-left: 200px"
+    >
       <nav>
         <div class="row">
           <div class="container mt-3 col">
